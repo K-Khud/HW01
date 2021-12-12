@@ -8,21 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selection: Int = 1
+    @State private var selection: Int = 0
+    @State var selectedMovie: Int?
 
     var body: some View {
         TabView(selection: $selection) {
-            GeneralView()
+            GeneralBooksView(tabSelection: $selection, movieSelected: $selectedMovie)
                 .tabItem {
                     Label("Books", systemImage: "book")
                 }
                 .tag(0)
-            GeneralView()
+            MoviesView(selectedLink: $selectedMovie)
                 .tabItem {
                     Label("Movies", systemImage: "tv")
                 }
                 .tag(1)
-            GeneralView()
+            PodcastsView()
                 .tabItem {
                     Label("Podcasts", systemImage: "headphones")
                 }

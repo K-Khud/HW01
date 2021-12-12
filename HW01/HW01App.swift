@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct HW01App: App {
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(PodcastsViewModel())
+                .environmentObject(BooksViewModel())
+                .environmentObject(MoviesViewModel())
+            
         }
     }
 }

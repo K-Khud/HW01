@@ -35,12 +35,8 @@ struct MoviesListView: View {
     }
 }
 
-//struct MoviesView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MoviesView(selectedLink: Binding(get: {
-//            <#code#>
-//        }, set: { <#Transaction#> in
-//            <#code#>
-//        }))
-//    }
-//}
+struct MoviesView_Previews: PreviewProvider {
+    static var previews: some View {
+        MoviesView(selectedLink: .constant(0))
+    }
+}

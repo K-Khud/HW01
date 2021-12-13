@@ -59,9 +59,9 @@ struct BooksView: View {
     }
 }
 
-//struct GeneralBooksView_Previews: PreviewProvider {
-//    @Binding var tabSelection: Int = 0
-//    static var previews: some View {
-//        BooksView(tabSelection: $tabSelection)
-//    }
-//}
+struct GeneralBooksView_Previews: PreviewProvider {
+
+    static var previews: some View {
+        BooksView(tabSelection: .constant(0), movieSelected: .constant(0))
+    }
+}

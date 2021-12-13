@@ -18,7 +18,6 @@ struct MoviesView: View {
 
 struct MoviesListView: View {
     @EnvironmentObject var viewModel: MoviesViewModel
-    @State var detailsOpened: Bool = false
 
     @Binding var selectedLink: Int?
 
